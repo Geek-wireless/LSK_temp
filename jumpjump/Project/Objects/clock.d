@@ -1,6 +1,5 @@
 .\objects\clock.o: ..\User\clock\clock.c
 .\objects\clock.o: ..\User\clock\clock.h
-.\objects\clock.o: ..\User\sys\sys.h
 .\objects\clock.o: ..\Libraries\CMSIS\stm32f10x.h
 .\objects\clock.o: ..\Libraries\CMSIS\core_cm3.h
 .\objects\clock.o: D:\ARM\ARMCC\Bin\..\include\stdint.h

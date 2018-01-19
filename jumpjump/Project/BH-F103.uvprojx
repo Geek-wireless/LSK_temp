@@ -540,6 +540,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\jump.c</FilePath>
             </File>
+            <File>
+              <FileName>readme.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\readme.txt</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

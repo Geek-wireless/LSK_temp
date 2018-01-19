@@ -32,4 +32,5 @@
 .\objects\stm32f10x_it.o: ..\User\usart\bsp_usart.h
 .\objects\stm32f10x_it.o: D:\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\stm32f10x_it.o: ..\User\clock\clock.h
+.\objects\stm32f10x_it.o: ..\User\jump.h
 .\objects\stm32f10x_it.o: ..\User\sys\sys.h

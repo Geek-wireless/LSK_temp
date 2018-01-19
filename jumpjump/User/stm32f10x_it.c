@@ -25,8 +25,10 @@
 #include "stm32f10x_it.h"
 #include "bsp_usart.h"
 #include "clock.h"
+#include "jump.h"
 
 extern int time_count;
+
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -165,7 +167,7 @@ void  BASIC_TIM_IRQHandler (void)
 	{	
 		time_count++;
 		TIM_ClearITPendingBit(BASIC_TIM , TIM_FLAG_Update);  		 
-	}		 	
+	}	
 }
 
 void DEBUG_USART_IRQHandler(void)

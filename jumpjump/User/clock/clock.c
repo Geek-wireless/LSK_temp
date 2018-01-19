@@ -82,4 +82,5 @@ void wait(int time)
 	//使能定时器
 	TIM_Cmd(BASIC_TIM, ENABLE);	
 	while(time_count<time);
+	time_count=0;
 }

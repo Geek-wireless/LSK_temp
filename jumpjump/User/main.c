@@ -13,10 +13,10 @@ int main(void)
 	BASIC_TIM_Init();
 	PWM_config();
 	test_config();
-	
+
 	//scanf("%d",&Length);
 	
-	//Jump(Length);
+	JUMP(1000);
 
 
 }

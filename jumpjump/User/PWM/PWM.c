@@ -30,7 +30,7 @@ void PWM_config()
 	TIMOC_config.TIM_OCMode =TIM_OCMode_PWM1 ;          
      TIMOC_config.TIM_OutputState = TIM_OutputState_Enable;                 
 
-     TIMOC_config.TIM_Pulse =0;          
+     TIMOC_config.TIM_Pulse =3;          
 	//0.5ms--------------0?;
    //1.0ms------------45?;
    //1.5ms------------90?;
@@ -43,5 +43,5 @@ void PWM_config()
 		
 		TIM_ARRPreloadConfig(TIM4, ENABLE);
 	
-    TIM_Cmd(TIM4,DISABLE);	
+    TIM_Cmd(TIM4,ENABLE);	
 }
