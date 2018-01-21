@@ -7,6 +7,6 @@
 //TIM_SetCompare2(TIM3,pwmval);调节占空比
 //TIM_SetAutoreload(TIM3,arr);调节周期
 void PWM_config(void);
-void PWM_change(void);
+
 
 #endif

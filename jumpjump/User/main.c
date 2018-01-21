@@ -12,12 +12,11 @@ int main(void)
 	USART_Config();
 	BASIC_TIM_Init();
 	PWM_config();
-	test_config();
-
-	//scanf("%d",&Length);
+	//test_config();
 	
-	JUMP(1000);
-
+	//scanf("%d",&Length);//ÊäÈëÎªºÁÃ×
+	//printf("%d  kk\n",Length);
+	JUMP(30);
 
 }
 
