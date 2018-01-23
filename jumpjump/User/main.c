@@ -5,19 +5,19 @@
 #include "jump.h"
 #include "clock.h"
 #include "test.h"
-
+	int Length=-1;
 int main(void)
 {
-	int Length;
 	USART_Config();
 	BASIC_TIM_Init();
 	PWM_config();
 	//test_config();
-	
-	//scanf("%d",&Length);//ÊäÈëÎªºÁÃ×
-	//printf("%d  kk\n",Length);
-	JUMP(30);
-
+	while(1)
+	{
+	while(Length==-1);
+	JUMP(Length);
+	Length=-1;
+	}
 }
 
 

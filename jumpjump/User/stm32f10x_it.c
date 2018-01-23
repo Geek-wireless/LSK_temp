@@ -28,7 +28,7 @@
 #include "jump.h"
 
 extern int time_count;
-
+extern int Length;
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -172,11 +172,15 @@ void  BASIC_TIM_IRQHandler (void)
 
 void DEBUG_USART_IRQHandler(void)
  {
-	uint8_t ucTemp;
-	if (USART_GetITStatus(DEBUG_USARTx,USART_IT_RXNE)!=RESET) {
-	ucTemp = USART_ReceiveData( DEBUG_USARTx );
-	USART_SendData(DEBUG_USARTx,ucTemp);
+	 if(USART_GetFlagStatus(USART1, USART_FLAG_ORE) != RESET) 
+	{ 
+	USART_ClearFlag(USART1, USART_FLAG_ORE); //?????? 
 	}
+	if (USART_GetITStatus(DEBUG_USARTx,USART_IT_RXNE)!=RESET) {
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE); 
+	Length = USART_ReceiveData( DEBUG_USARTx );
+	}
+
  }
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
