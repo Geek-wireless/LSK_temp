@@ -8,10 +8,15 @@ void delay_ms(u16 nms)
 }   		    								   
 void delay_us(u32 nus)
 {		
-    delay_10ns(nus*95);	 
-}
-
-void delay_10ns(u32 ntns) 
-{         
-    while(ntns--){}                  
+    u32 temp;
+     SysTick->LOAD=9*nus;         //??????, 72MHZ?
+     SysTick->CTRL=0X01;         //??,???????,???????
+     SysTick->VAL=0;                //?????
+     do
+     {
+         temp=SysTick->CTRL;           //????????
+     }
+     while((temp&0x01)&&(!(temp&(1<<16))));     //??????
+     SysTick->CTRL=0;    //?????
+    SysTick->VAL=0;        //?????
 }
